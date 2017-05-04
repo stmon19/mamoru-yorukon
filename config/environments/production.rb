@@ -69,6 +69,15 @@ Rails.application.configure do
       # config.action_mailer.raise_delivery_errors = false
     end
   end
+  config.action_mailer.smtp_settings = {
+    enable_starttls_auto: true,
+    address: 'smtp.gmail.com',
+    port: '587',
+    domain: 'localhost:3000',
+    authentication: 'plain',
+    user_name: ENV['MAIL_USER_NAME'],
+    password: ENV['MAIL_PASSWORD']
+  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

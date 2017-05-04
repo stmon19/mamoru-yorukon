@@ -19,3 +19,6 @@ Refinery::Posts::Engine.load_seed
 
 # Added by Refinery CMS Biographies extension
 Refinery::Biographies::Engine.load_seed
+
+# Added by Refinery CMS Contacts extension
+Refinery::Contacts::Engine.load_seed

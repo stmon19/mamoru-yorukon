@@ -1,0 +1,35 @@
+- if flash[:notice].present?
+  .alert.alert-info
+    = flash[:notice]
+- if @contact.errors.present?
+  .alert.alert-danger
+    ul
+      - @contact.errors.full_messages.each do |message|
+          li = message
+
+
+= form_for @contact, url: refinery.contacts_contacts_path do |f|
+  .form-group.row
+    = f.label :name, class: ['col-sm-2', 'form-control-label']
+    .col-md-4.col-sm-4
+      = f.text_field :name, class: ['form-control'], required: true
+
+  .form-group.row
+    = f.label :mail_address, class: ['col-sm-2', 'form-control-label']
+    .col-md-4.col-sm-4
+      = f.email_field :mail_address, class: ['form-control'], required: true
+
+  .form-group.row
+    = f.label :subject, class: ['col-sm-2', 'form-control-label']
+    .col-md-4.col-sm-4
+      = f.text_field :subject, class: ['form-control']
+
+  .form-group.row
+    = f.label :message, class: ['col-sm-2', 'form-control-label']
+    .col-md-10.col-sm-10
+      = f.text_area :message, class: ['form-control'], rows: 8, required: true
+
+
+  .form-group.row
+    .col-md-offset-2.col-md-10.col-sm-offset-2.col-sm-10
+      = f.submit '送信', class: ['btn', 'btn-secondary']

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170504165726) do
+ActiveRecord::Schema.define(version: 20170504172306) do
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title", limit: 255
@@ -59,6 +59,16 @@ ActiveRecord::Schema.define(version: 20170504165726) do
     t.text     "content",    limit: 65535, null: false
     t.integer  "image_id",   limit: 4
     t.integer  "position",   limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_contacts", force: :cascade do |t|
+    t.string   "name",         limit: 255,   null: false
+    t.string   "mail_address", limit: 255,   null: false
+    t.string   "subject",      limit: 255
+    t.text     "message",      limit: 65535
+    t.integer  "position",     limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
