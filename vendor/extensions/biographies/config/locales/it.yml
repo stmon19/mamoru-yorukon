@@ -1,0 +1,28 @@
+it:
+  refinery:
+    plugins:
+      biographies:
+        title: Biographies
+    biographies:
+      admin:
+        biographies:
+          actions:
+            create_new: Aggiungi Nuovo Biography
+            reorder: Riordina Biographies
+            reorder_done: Termina il Riordino di Biographies
+          records:
+            title: Biographies
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Biographies. Clicca "Aggiungi Nuovo Biography" per aggiungere il tuo primo biography.
+          biography:
+            view_live_html: Guarda live questo biography <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo biography
+            delete: Rimuovi per sempre questo biography
+      biographies:
+        show:
+          other: Altri Biographies
+  activerecord:
+    attributes:
+      'refinery/biographies/biography':
+        content: Content
+        image: Image

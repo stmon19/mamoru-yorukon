@@ -1,0 +1,28 @@
+tr:
+  refinery:
+    plugins:
+      biographies:
+        title: Biographies
+    biographies:
+      admin:
+        biographies:
+          actions:
+            create_new: Yeni Ekle Biography
+            reorder: Tekrar sirala Biographies
+            reorder_done: Tekrar siralama tamamlandiBiographies
+          records:
+            title: Biographies
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Biographies yok henuz.  Tikla "Yeni Ekle Biography" eklemek senin ilk biography.
+          biography:
+            view_live_html: Bunu canlu biography goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle biography
+            delete: Bunu Sil biography sonsuza dek
+      biographies:
+        show:
+          other: Diger Biographies
+  activerecord:
+    attributes:
+      'refinery/biographies/biography':
+        content: Content
+        image: Image

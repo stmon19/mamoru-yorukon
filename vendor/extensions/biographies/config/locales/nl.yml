@@ -1,0 +1,28 @@
+nl:
+  refinery:
+    plugins:
+      biographies:
+        title: Biographies
+    biographies:
+      admin:
+        biographies:
+          actions:
+            create_new: Nieuwe Biography toevoegen
+            reorder: De volgorde van de Biographies wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Biography-volgorde
+          records:
+            title: Biographies
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Biographies. Druk op 'Nieuwe Biography toevoegen' om de eerste toe te voegen.
+          biography:
+            view_live_html: Deze biography op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze biography
+            delete: Deze biography definitief verwijderen
+      biographies:
+        show:
+          other: Andere Biographies
+  activerecord:
+    attributes:
+      'refinery/biographies/biography':
+        content: Content
+        image: Image

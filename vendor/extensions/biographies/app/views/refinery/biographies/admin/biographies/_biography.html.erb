@@ -1,0 +1,12 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(biography) -%>">
+  <span class='title'>
+    <%= l(biography.updated_at, format: :short) %>
+  </span>
+  <span class='actions'>
+
+    <%= action_icon(:edit,    refinery.edit_biographies_admin_biography_path(biography), t('.edit') ) %>
+    <%= action_icon(:delete,  refinery.biographies_admin_biography_path(biography), t('.delete'),
+      { class: "cancel confirm-delete",
+        data: {confirm: t('message',  scope: 'refinery.admin.delete')}}  ) %>
+  </span>
+</li>

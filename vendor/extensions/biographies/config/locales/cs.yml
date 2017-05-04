@@ -1,0 +1,28 @@
+cs:
+  refinery:
+    plugins:
+      biographies:
+        title: Biographies
+    biographies:
+      admin:
+        biographies:
+          actions:
+            create_new: Přidat Biography
+            reorder: Řadit Biographies
+            reorder_done: Konec řazení Biographies
+          records:
+            title: Biographies
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Biographies. Zvolte "Přidat Biography" pro přidání prvního biography.
+          biography:
+            view_live_html: Zobrazit náhled biography<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit biography
+            delete: Smazat biography
+      biographies:
+        show:
+          other: Další Biographies
+  activerecord:
+    attributes:
+      'refinery/biographies/biography':
+        content: Content
+        image: Image

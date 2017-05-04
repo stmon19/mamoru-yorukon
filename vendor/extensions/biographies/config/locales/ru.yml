@@ -1,0 +1,28 @@
+ru:
+  refinery:
+    plugins:
+      biographies:
+        title: Biographies
+    biographies:
+      admin:
+        biographies:
+          actions:
+            create_new: Добавить Biography
+            reorder: Изменить порядок Biographies
+            reorder_done: Закончить изменять порядок Biographies
+          records:
+            title: Biographies
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Biographies" не найдено. Нажмите "Добавить Biography" чтобы создать biography.
+          biography:
+            view_live_html: Просмотреть biography вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать biography
+            delete: Удалить biography навсегда
+      biographies:
+        show:
+          other: Другие Biographies
+  activerecord:
+    attributes:
+      'refinery/biographies/biography':
+        content: Content
+        image: Image

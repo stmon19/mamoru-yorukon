@@ -49,3 +49,4 @@ end
 gem 'refinerycms-works', path: 'vendor/extensions'
 
 gem 'refinerycms-posts', path: 'vendor/extensions'
+gem 'refinerycms-biographies', path: 'vendor/extensions'

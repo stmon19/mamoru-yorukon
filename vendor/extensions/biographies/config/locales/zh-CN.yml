@@ -1,0 +1,30 @@
+zh-CN:
+  refinery:
+    plugins:
+      biographies:
+        title: Biographies
+    biographies:
+      admin:
+        biographies:
+          actions:
+            create_new: 建立新的 Biography
+            reorder: 对 Biographies 重新排序
+            reorder_done: 对 Biographies 的重新排序结束
+          records:
+            title: Biographies
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Biographies yet. Click "Add New Biography" to add your first biography.
+            no_items_yet: 目前没有 Biographies . 点击 "Add New Biography" 创建一个biography.
+          biography:
+            view_live_html: 查看 biography 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 biography
+            delete: 永久删除 biography
+      biographies:
+        show:
+          other: 其他 Biographies
+  activerecord:
+    attributes:
+      'refinery/biographies/biography':
+        content: Content
+        image: Image
