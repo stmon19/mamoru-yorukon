@@ -1,0 +1,34 @@
+ja:
+  refinery:
+    plugins:
+      works:
+        title: WORKS
+    works:
+      admin:
+        works:
+          actions:
+            create_new: Add New Work
+            reorder: Reorder Works
+            reorder_done: Done Reordering Works
+          records:
+            title: WORKS
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Works yet. Click "Add New Work" to add your first work.
+          work:
+            view_live_html: View this work live <br/><em>(opens in a new window)</em>
+            edit: Edit this work
+            delete: Remove this work forever
+      works:
+        show:
+          other: Other WORKS
+  activerecord:
+    attributes:
+      'refinery/works/work':
+        title: 作品名
+        image: 画像
+        description: 説明
+        material: 素材
+        width: 幅
+        depth: 奥行き
+        height: 高さ
+        finished_at: 製作完了日

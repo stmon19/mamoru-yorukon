@@ -1,0 +1,28 @@
+- content_for(:javascripts) { javascript_include_tag('jquery.blueimp-gallery.min.js') }
+- content_for(:javascripts) { javascript_include_tag('bootstrap-image-gallery.min.js') }
+- content_for(:javascripts) { javascript_include_tag('works.js') }
+- content_for(:stylesheets) { stylesheet_link_tag('blueimp-gallery.min.css') }
+- content_for(:stylesheets) { stylesheet_link_tag('bootstrap-image-gallery.min.css') }
+- content_for(:stylesheets) { stylesheet_link_tag('works.css') }
+
+#blueimp-gallery.blueimp-gallery.blueimp-gallery-controls data-use-bootstrap-modal='false'
+  .slides
+  h3.title
+  a.prev ‹
+  a.next ›
+  a.close ×
+  ol.indicator
+
+ul.rb-grid#links
+  - @works.order(finished_at: :desc).each do |work|
+    = content_tag(:li, class: work.horizontal_image? ? 'grid2' : 'grid1')
+      .row
+        .col-md-12
+          .work-container
+            .thumbnail
+              = link_to image_tag(work.image.try(:thumbnail).try(:url)), work.image.try(:thumbnail).try(:url), data: {gallery: ''}, title: "#{work.title} #{work.material} #{work.size}"
+            .information
+              p.title              = work.title
+              p.small.material     = work.material
+              p.small.size         = work.size
+              p.small.completed_at = l(work.finished_at.try(:to_date), format: :year_month)

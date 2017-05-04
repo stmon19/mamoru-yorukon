@@ -1,0 +1,16 @@
+- content_for(:javascripts) { javascript_include_tag('jquery.sliderPro.min.js') }
+- content_for(:javascripts) { javascript_include_tag('home.js') }
+- content_for(:stylesheets) { stylesheet_link_tag('slider-pro.min.css') }
+
+.row
+  .col-md-12.col-sm-12
+    .slider-pro#home-slider
+      .sp-slides
+        - @works.try(:each) do |work|
+          .sp-slide
+            = image_tag work.image.try(:thumbnail).try(:url), class: 'sp-image'
+
+
+.row
+  .col-md-12.col-sm-12.text-center.lead
+    / = link_to 'ENTER', refinery.posts_posts_path

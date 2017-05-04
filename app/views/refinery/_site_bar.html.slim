@@ -1,0 +1,19 @@
+- if display_site_bar?
+  - unless admin? # all required JS included by backend.
+    - content_for :stylesheets, stylesheet_link_tag('refinery/site_bar') unless !!local_assigns[:exclude_css]
+    = yield(:stylesheets) unless local_assigns[:head] || local_assigns[:exclude_css]
+  #site_bar
+    #site_bar_content.clearfix
+      #editor_switch
+        = site_bar_switch_link
+        = site_bar_edit_link
+
+      #site_bar_refinery_cms_logo
+
+      #site_bar_branding
+        span#site_bar_company_name
+          = Refinery::Core.site_name
+        = link_to t('.log_out', site_bar_translate_locale_args),            \
+          ::Refinery::Core.refinery_logout_path,
+          id: 'logout' if ::Refinery::Core.refinery_logout_path.present?
+

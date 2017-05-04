@@ -1,0 +1,73 @@
+ul.rb-grid {
+  list-style: none;
+  margin: 0 auto;
+  padding-left: 0;
+
+  .grid1 {
+    width: 25%;
+  }
+
+  .grid2 {
+    width: 50%;
+  }
+
+  li {
+    height: 15em;
+    display: block;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+    border: solid 1px #FFF;
+
+    .work-container {
+      position: relative;
+
+      .thumbnail img {
+        width: 100%;
+      }
+
+      .information {
+        color: white;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background: rgba(120, 120, 120, .4);
+        pointer-events: none;
+
+        p {
+          font-weight: 200;
+          margin: 1.2rem 0 0 1.2rem;
+          line-height: 1;
+        }
+
+        .title{
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.blueimp-gallery .slide {
+  background: #f6f6f6;
+  .title {
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 63.125em) {
+
+  .rb-grid li.grid1, .rb-grid li.grid2 {
+    width: 100%;
+    height: 10em;
+    text-align: left;
+
+    div {
+      text-align: center;
+    }
+    .work-container .information p {
+      margin: 1.2rem 0 0 0;
+    }
+  }
+}

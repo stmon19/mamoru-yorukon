@@ -1,0 +1,19 @@
+doctype html
+= content_tag :html, lang: :ja, class: 'no-js'
+  head
+    = render '/refinery/head'
+
+  = content_tag :body, '', id: canonical_id(@page)
+    #page_container
+      header#header
+        = render '/refinery/header'
+
+      section#page
+        .container
+          = render('/refinery/site_bar', head: false)
+          = yield
+
+      footer
+        = render '/refinery/footer'
+
+    = render '/refinery/javascripts'

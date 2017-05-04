@@ -1,0 +1,13 @@
+nav.navbar.navbar-light.bg-faded
+  .container
+    = link_to refinery.root_path, class: 'navbar-brand' do
+      = image_tag('logo.jpg', alt: '近藤 守', height: 30, class: ['pull-left'])
+      | 近藤 守
+    button.navbar-toggler.hidden-sm-up data-target="#collapsingNavbar" data-toggle="collapse" type="button"
+      | ☰
+    #collapsingNavbar.collapse.navbar-toggleable-xs
+      ul.nav.navbar-nav
+        / = navigation_tag('NEWS', refinery.posts_posts_path)
+        = navigation_tag('WORKS', refinery.works_works_path)
+        / = navigation_tag('BIOGRAPHY', refinery.biographies_biographies_path)
+        / = navigation_tag('CONTACT', refinery.new_contacts_contacts_path)
