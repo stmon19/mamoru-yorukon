@@ -1,0 +1,32 @@
+ja:
+  refinery:
+    plugins:
+      posts:
+        title: NEWS
+    posts:
+      admin:
+        posts:
+          actions:
+            create_new: Add New NEWS
+            reorder: Reorder NEWS
+            reorder_done: Done Reordering NEWS
+          records:
+            title: NEWS
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no NEWS yet. Click "Add New NEWS" to add your first post.
+          post:
+            view_live_html: View this NEWS live <br/><em>(opens in a new window)</em>
+            edit: Edit this NEWS
+            delete: Remove this NEWS forever
+      posts:
+        show:
+          other: Other NEWS
+  activerecord:
+    attributes:
+      'refinery/posts/post':
+        title: タイトル
+        image: 画像
+        description: 説明
+        event_start_at: 開始日
+        event_end_at: 終了日
+        venue: 会場

@@ -1,0 +1,34 @@
+zh-CN:
+  refinery:
+    plugins:
+      posts:
+        title: Posts
+    posts:
+      admin:
+        posts:
+          actions:
+            create_new: 建立新的 Post
+            reorder: 对 Posts 重新排序
+            reorder_done: 对 Posts 的重新排序结束
+          records:
+            title: Posts
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Posts yet. Click "Add New Post" to add your first post.
+            no_items_yet: 目前没有 Posts . 点击 "Add New Post" 创建一个post.
+          post:
+            view_live_html: 查看 post 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 post
+            delete: 永久删除 post
+      posts:
+        show:
+          other: 其他 Posts
+  activerecord:
+    attributes:
+      'refinery/posts/post':
+        title: Title
+        image: Image
+        description: Description
+        event_start_at: Event Start At
+        event_end_at: Event End At
+        venue: Venue

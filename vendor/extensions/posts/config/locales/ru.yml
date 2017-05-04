@@ -1,0 +1,32 @@
+ru:
+  refinery:
+    plugins:
+      posts:
+        title: Posts
+    posts:
+      admin:
+        posts:
+          actions:
+            create_new: Добавить Post
+            reorder: Изменить порядок Posts
+            reorder_done: Закончить изменять порядок Posts
+          records:
+            title: Posts
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Posts" не найдено. Нажмите "Добавить Post" чтобы создать post.
+          post:
+            view_live_html: Просмотреть post вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать post
+            delete: Удалить post навсегда
+      posts:
+        show:
+          other: Другие Posts
+  activerecord:
+    attributes:
+      'refinery/posts/post':
+        title: Title
+        image: Image
+        description: Description
+        event_start_at: Event Start At
+        event_end_at: Event End At
+        venue: Venue

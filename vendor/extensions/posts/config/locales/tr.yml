@@ -1,0 +1,32 @@
+tr:
+  refinery:
+    plugins:
+      posts:
+        title: Posts
+    posts:
+      admin:
+        posts:
+          actions:
+            create_new: Yeni Ekle Post
+            reorder: Tekrar sirala Posts
+            reorder_done: Tekrar siralama tamamlandiPosts
+          records:
+            title: Posts
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Posts yok henuz.  Tikla "Yeni Ekle Post" eklemek senin ilk post.
+          post:
+            view_live_html: Bunu canlu post goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle post
+            delete: Bunu Sil post sonsuza dek
+      posts:
+        show:
+          other: Diger Posts
+  activerecord:
+    attributes:
+      'refinery/posts/post':
+        title: Title
+        image: Image
+        description: Description
+        event_start_at: Event Start At
+        event_end_at: Event End At
+        venue: Venue

@@ -1,0 +1,31 @@
+- content_for(:stylesheets) { stylesheet_link_tag('posts.css') }
+
+.row
+  .main-box.col-md-12.col-sm-12
+    .row
+      .col-md-12.col-sm-12
+        h1.text-center = @post.title
+    .row
+      .col-md-12.col-sm-12.text-center
+        h3.venue
+          = @post.venue
+    .row
+      .col-md-12.col-sm-12.text-center
+        span.date
+          = l(@post.event_start_at.to_date, format: :simple)
+          | 〜
+          = l(@post.event_end_at.to_date, format: :simple)
+          = " #{l(@post.event_start_at, format: :time_only)}〜#{l(@post.event_end_at, format: :time_only)}"
+
+.row
+  .col-md-12.col-sm-12.text-center
+    .main-image
+      = image_tag @post.image.try(:url), class: ['img-responsive', 'img-rounded', 'center-block']
+
+.row
+  .col-md-12.col-sm-12
+    .description
+      == @post.description
+.row
+  .col-md-12.col-sm-12.text-right
+    = link_to 'NEWS一覧に戻る', refinery.posts_posts_path

@@ -1,0 +1,32 @@
+it:
+  refinery:
+    plugins:
+      posts:
+        title: Posts
+    posts:
+      admin:
+        posts:
+          actions:
+            create_new: Aggiungi Nuovo Post
+            reorder: Riordina Posts
+            reorder_done: Termina il Riordino di Posts
+          records:
+            title: Posts
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Posts. Clicca "Aggiungi Nuovo Post" per aggiungere il tuo primo post.
+          post:
+            view_live_html: Guarda live questo post <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo post
+            delete: Rimuovi per sempre questo post
+      posts:
+        show:
+          other: Altri Posts
+  activerecord:
+    attributes:
+      'refinery/posts/post':
+        title: Title
+        image: Image
+        description: Description
+        event_start_at: Event Start At
+        event_end_at: Event End At
+        venue: Venue

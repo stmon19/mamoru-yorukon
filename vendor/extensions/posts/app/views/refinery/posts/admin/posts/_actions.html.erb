@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Posts::Admin::PostsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.posts_admin_posts_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_posts_admin_post_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Posts::Admin::PostsController.sortable? && ::Refinery::Posts::Post.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.posts_admin_posts_path,
+                     t('.reorder', what:  "Posts"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.posts_admin_posts_path,
+                      t('.reorder_done', what: "Posts"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

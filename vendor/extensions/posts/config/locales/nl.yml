@@ -1,0 +1,32 @@
+nl:
+  refinery:
+    plugins:
+      posts:
+        title: Posts
+    posts:
+      admin:
+        posts:
+          actions:
+            create_new: Nieuwe Post toevoegen
+            reorder: De volgorde van de Posts wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Post-volgorde
+          records:
+            title: Posts
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Posts. Druk op 'Nieuwe Post toevoegen' om de eerste toe te voegen.
+          post:
+            view_live_html: Deze post op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze post
+            delete: Deze post definitief verwijderen
+      posts:
+        show:
+          other: Andere Posts
+  activerecord:
+    attributes:
+      'refinery/posts/post':
+        title: Title
+        image: Image
+        description: Description
+        event_start_at: Event Start At
+        event_end_at: Event End At
+        venue: Venue

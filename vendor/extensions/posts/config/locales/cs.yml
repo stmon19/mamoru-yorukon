@@ -1,0 +1,32 @@
+cs:
+  refinery:
+    plugins:
+      posts:
+        title: Posts
+    posts:
+      admin:
+        posts:
+          actions:
+            create_new: Přidat Post
+            reorder: Řadit Posts
+            reorder_done: Konec řazení Posts
+          records:
+            title: Posts
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Posts. Zvolte "Přidat Post" pro přidání prvního post.
+          post:
+            view_live_html: Zobrazit náhled post<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit post
+            delete: Smazat post
+      posts:
+        show:
+          other: Další Posts
+  activerecord:
+    attributes:
+      'refinery/posts/post':
+        title: Title
+        image: Image
+        description: Description
+        event_start_at: Event Start At
+        event_end_at: Event End At
+        venue: Venue

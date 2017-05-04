@@ -1,0 +1,54 @@
+<%= form_for [refinery, :posts_admin, @post] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @post,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :image_id,
+               :image => @post.image,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:description],
+                :object => "posts/post" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :event_start_at -%>
+    <%= f.datetime_select :event_start_at -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :event_end_at -%>
+    <%= f.datetime_select :event_end_at -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :venue -%>
+    <%= f.text_field :venue -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.posts.admin.posts.post'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @post.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

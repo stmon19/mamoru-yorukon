@@ -1,0 +1,22 @@
+- content_for(:javascripts) { javascript_include_tag('jquery.sliderPro.min.js') }
+- content_for(:javascripts) { javascript_include_tag('posts.js') }
+- content_for(:stylesheets) { stylesheet_link_tag('slider-pro.min.css') }
+- content_for(:stylesheets) { stylesheet_link_tag('posts.css') }
+
+.row
+  .col-md-12.col-sm-12
+    .slider-pro#news-slider
+      .sp-slides
+        - @posts.order(created_at: :desc).each do |post|
+          .sp-slide
+            = link_to refinery.posts_post_path(post) do
+              = image_tag post.image.try(:thumbnail).try(:url), class: 'sp-image'
+            span.sp-layer.title.sp-white.sp-padding.cramp data-horizontal=40 data-vertical=40  data-show-transition='left' data-show-delay=600  = post.title
+            span.sp-layer.venue.sp-white.sp-padding.cramp data-horizontal=40 data-vertical=120 data-show-transition='left' data-show-delay=900  = post.venue
+            span.sp-layer.date.sp-white.sp-padding        data-horizontal=40 data-vertical=180 data-show-transition='left' data-show-delay=1000
+              = l(post.event_start_at.to_date, format: :simple)
+              | 〜
+              = l(post.event_end_at.to_date, format: :simple)
+      .sp-thumbnails
+        - @posts.order(created_at: :desc).each do |post|
+          = image_tag post.image.try(:thumbnail).try(:url), class: 'sp-thumbnail'
