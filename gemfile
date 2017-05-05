@@ -17,6 +17,11 @@ gem 'refinerycms-acts-as-indexed'
 gem 'refinerycms-wymeditor'
 gem 'refinerycms-authentication-devise'
 
+gem 'refinerycms-works',       path: 'vendor/extensions'
+gem 'refinerycms-posts',       path: 'vendor/extensions'
+gem 'refinerycms-biographies', path: 'vendor/extensions'
+gem 'refinerycms-contacts',    path: 'vendor/extensions'
+
 gem 'slim'
 gem 'dotenv-rails'
 gem 'puma'
@@ -45,9 +50,3 @@ group :test do
   # gem 'faker'
   # gem 'fuubar'
 end
-
-gem 'refinerycms-works', path: 'vendor/extensions'
-
-gem 'refinerycms-posts', path: 'vendor/extensions'
-gem 'refinerycms-biographies', path: 'vendor/extensions'
-gem 'refinerycms-contacts', path: 'vendor/extensions'
