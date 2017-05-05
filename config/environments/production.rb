@@ -73,7 +73,7 @@ Rails.application.configure do
     enable_starttls_auto: true,
     address: 'smtp.gmail.com',
     port: '587',
-    domain: 'localhost:3000',
+    domain: 'mamoru-yorukon.com',
     authentication: 'plain',
     user_name: ENV['MAIL_USER_NAME'],
     password: ENV['MAIL_PASSWORD']
